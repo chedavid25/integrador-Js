@@ -169,6 +169,7 @@ aside {
   object-fit: contain;
   margin-top: 3rem;
   margin-bottom: 5rem;
+  border-radius: 1rem;
 }
 
 #titulo-sobre-nosotros {
