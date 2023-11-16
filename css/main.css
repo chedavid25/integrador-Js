@@ -137,6 +137,7 @@ aside {
 .texto-footer {
   color: var(--clr-main-light);
   font-size: 0.85rem;
+  text-align: center;
 }
 
 #titulo-hero {
