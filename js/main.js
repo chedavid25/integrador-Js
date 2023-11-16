@@ -335,3 +335,66 @@ document.getElementById("contacto").addEventListener("click", function () {
 });
 
 //Validacion de formulario
+
+document
+  .getElementById("contactForm")
+  .addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    var nombre = document.getElementById("nombre").value;
+    var email = document.getElementById("email").value;
+    var telefono = document.getElementById("telefono").value;
+
+    var messageElement = document.getElementById("formMessage");
+
+    if (!nombre || !email || isNaN(telefono)) {
+      messageElement.textContent = "Por favor, rellene todos los campos.";
+      messageElement.style.color = "red";
+    } else {
+      messageElement.textContent = "Mensaje enviado con éxito.";
+      messageElement.style.color = "green";
+      messageElement.style.justifyContent = "center";
+    }
+  });
+
+//Que la pagina se deslice a las secciones correspondientes cuando se usan los botones del menu
+
+document.getElementById("inicio").addEventListener("click", function () {
+  document.getElementById("titulo-hero").scrollIntoView({ behavior: "smooth" });
+});
+
+document.getElementById("sobreNosotros").addEventListener("click", function () {
+  document
+    .getElementById("titulo-sobre-nosotros")
+    .scrollIntoView({ behavior: "smooth" });
+});
+
+document.getElementById("todos").addEventListener("click", function () {
+  document
+    .getElementById("titulo-principal")
+    .scrollIntoView({ behavior: "smooth" });
+});
+
+document.getElementById("musica").addEventListener("click", function () {
+  document
+    .getElementById("titulo-principal")
+    .scrollIntoView({ behavior: "smooth" });
+});
+
+document.getElementById("peliculas").addEventListener("click", function () {
+  document
+    .getElementById("titulo-principal")
+    .scrollIntoView({ behavior: "smooth" });
+});
+
+document.getElementById("famosos").addEventListener("click", function () {
+  document
+    .getElementById("titulo-principal")
+    .scrollIntoView({ behavior: "smooth" });
+});
+
+document.getElementById("contacto").addEventListener("click", function () {
+  document
+    .getElementById("titulo-formulario")
+    .scrollIntoView({ behavior: "smooth" });
+});
